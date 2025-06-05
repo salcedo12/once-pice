@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Tesoro</title>
+  <link rel="stylesheet" href="styles/cap3.css" />
+</head>
+<body>
+  <audio autoplay src="audio/reveal.mp3"></audio>
+
+  <div class="chapter">
+    <div class="chapter-content">
+      <h1>Capítulo 3: El tesoro revelado 🎁</h1>
+      <button onclick="revealMessage()">Descubrir mensaje ✨</button>
+<p id="hiddenMessage" class="hidden reveal-text">
+  Una taza mágica para una persona increíble y perfecta ✨,<br>
+  inspirada en One Piece. 👒<br><br>
+  ¡Feliz cumpleaños atrasado!
+</p>
+
+    </div>
+  </div>
+
+  <script>
+    function revealMessage() {
+      const msg = document.getElementById('hiddenMessage');
+      msg.classList.remove('hidden');
+      msg.classList.add('revealed');
+
+      // Opcional: reproducir audio sorpresa
+      const sfx = new Audio('audio/luffy-yeah.mp3'); // Puedes reemplazar con otra frase o sonido
+      sfx.play();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  background: url('../mapa.webp') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'IM Fell English SC', serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.chapter-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.chapter-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.chapter-content p {
+  color: #fce8d5;
+}
+
+.chapter-content button {
+  background-color: #fce8d5;
+  color: #5e3e2f;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.chapter-content button:hover {
+  background-color: #ffe4c4;
+  transform: scale(1.05);
+}
+
+.going-merry {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* ----------------- RESPONSIVE DESIGN ------------------ */
+
+@media (max-width: 768px) {
+  .chapter-content {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  .chapter-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .chapter-content button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .going-merry {
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .chapter-content {
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .chapter-content h1 {
+    font-size: 1.3rem;
+  }
+
+  .chapter-content button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .going-merry {
+    width: 70px;
+  }
+}

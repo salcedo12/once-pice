@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  background: url('../pista.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'IM Fell English SC', serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.chapter-content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px) brightness(1.05);
+  -webkit-backdrop-filter: blur(15px) brightness(1.05);
+  border-radius: 25px;
+  padding: 2.5rem 3rem;
+  max-width: 550px;
+  width: 100%;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  animation: fadeIn 1.2s ease-out both;
+}
+
+.chapter-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  color: #ffe8c2;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.chapter-content p {
+  color: #fce8d5;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.chapter-content button {
+  background-color: #fce8d5;
+  color: #5e3e2f;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.chapter-content button:hover {
+  background-color: #ffe4c4;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.going-merry {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  animation: float 5s infinite ease-in-out;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+
+@media (max-width: 768px) {
+  .chapter-content {
+    padding: 2rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .chapter-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .chapter-content button {
+    font-size: 1rem;
+    padding: 0.6rem 1.3rem;
+  }
+
+  .going-merry {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .chapter-content {
+    padding: 1.2rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .chapter-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .chapter-content button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  .going-merry {
+    width: 75px;
+  }
+}
